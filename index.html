@@ -26,7 +26,8 @@
     }
 
     header img {
-      max-width: 80%; /* Ajusta a largura da imagem para 80% da largura da tela */
+      width: 100%;
+      max-width: 250px; /* limita o tamanho da logo no PC */
       height: auto;
       margin: 0 auto 20px;
       display: block;
@@ -58,7 +59,7 @@
       border-radius: 8px;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      font-size: 1rem; /* Ajuste no tamanho da fonte */
+      font-size: 1rem;
     }
 
     .botao:hover {
@@ -73,24 +74,24 @@
       margin-top: 50px;
     }
 
-    /* Ajustes para dispositivos móveis */
+    /* Responsividade para dispositivos móveis */
     @media (max-width: 768px) {
       h2 {
-        font-size: 1.6rem; /* Ajusta o tamanho do título */
+        font-size: 1.6rem;
       }
 
       p {
-        font-size: 1rem; /* Ajusta o tamanho do texto */
-        padding: 0 10px; /* Adiciona padding para evitar o texto muito próximo das bordas */
+        font-size: 1rem;
+        padding: 0 10px;
       }
 
       .botao {
-        padding: 12px 25px; /* Ajusta o tamanho do botão para telas menores */
-        font-size: 0.9rem; /* Ajusta o tamanho da fonte do botão */
+        padding: 12px 25px;
+        font-size: 0.9rem;
       }
 
       footer {
-        font-size: 0.8rem; /* Ajusta o tamanho do texto do rodapé */
+        font-size: 0.8rem;
       }
     }
   </style>

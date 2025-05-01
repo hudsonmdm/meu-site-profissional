@@ -15,21 +15,37 @@
     body {
       position: relative;
       z-index: 1;
+      background: linear-gradient(to bottom, #1e0033, #000);
       color: white;
       line-height: 1.6;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
-    /* Fundo roxo pulsante */
-    @keyframes pulseBg {
-      0%, 100% { background: linear-gradient(to bottom, #4b0082, #330066); }
-      50% { background: linear-gradient(to bottom, #8000ff, #330066); }
+    /* Efeito animado nas laterais */
+    body::before,
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      width: 15px;
+      height: 100%;
+      z-index: 0;
+      background: linear-gradient(to bottom, #ff00ff33, #8000ff33, #ff00ff33);
+      animation: pulse 3s ease-in-out infinite;
     }
 
-    body {
-      animation: pulseBg 5s infinite;
-      height: 100vh;
+    body::before {
+      left: 0;
+    }
+
+    body::after {
+      right: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.6; }
     }
 
     header {
@@ -87,28 +103,6 @@
       margin-top: 50px;
     }
 
-    /* Partículas nos cantos */
-    .particle {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      animation: moveParticles 3s infinite;
-    }
-
-    @keyframes moveParticles {
-      0% {
-        transform: translate(0, 0);
-      }
-      50% {
-        transform: translate(50px, 50px);
-      }
-      100% {
-        transform: translate(100px, 100px);
-      }
-    }
-
     /* Responsivo */
     @media (max-width: 768px) {
       h2 {
@@ -129,16 +123,9 @@
         font-size: 0.8rem;
       }
     }
-
   </style>
 </head>
 <body>
-
-  <!-- Partículas -->
-  <div class="particle" style="top: 10%; left: 10%; animation-duration: 5s;"></div>
-  <div class="particle" style="top: 20%; right: 5%; animation-duration: 6s;"></div>
-  <div class="particle" style="top: 80%; left: 50%; animation-duration: 4s;"></div>
-  <div class="particle" style="top: 60%; right: 10%; animation-duration: 7s;"></div>
 
   <header>
     <img src="logo.png" alt="Logo The Wise Métodos">

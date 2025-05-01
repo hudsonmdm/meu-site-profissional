@@ -13,44 +13,15 @@
     }
 
     body {
-      position: relative;
-      z-index: 1;
       background: linear-gradient(to bottom, #1e0033, #000);
       color: white;
       line-height: 1.6;
       text-align: center;
-      overflow-x: hidden;
-    }
-
-    /* Efeito animado nas laterais */
-    body::before,
-    body::after {
-      content: '';
-      position: fixed;
-      top: 0;
-      width: 15px;
-      height: 100%;
-      z-index: 0;
-      background: linear-gradient(to bottom, #ff00ff33, #8000ff33, #ff00ff33);
-      animation: pulse 3s ease-in-out infinite;
-    }
-
-    body::before {
-      left: 0;
-    }
-
-    body::after {
-      right: 0;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.2; }
-      50% { opacity: 0.6; }
     }
 
     header {
-      background: #330066;
-      padding: 10px 0;
+      background: #330066; /* roxo escuro médio */
+      padding: 10px 0; /* faixa roxa menor */
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
@@ -103,7 +74,7 @@
       margin-top: 50px;
     }
 
-    /* Responsivo */
+    /* Responsividade para dispositivos móveis */
     @media (max-width: 768px) {
       h2 {
         font-size: 1.6rem;

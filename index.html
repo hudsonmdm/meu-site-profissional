@@ -26,14 +26,14 @@
     }
 
     header img {
-      max-width: 400px;
+      max-width: 90%;
       height: auto;
       margin: 0 auto 20px;
       display: block;
     }
 
     main {
-      padding: 50px 20px;
+      padding: 40px 20px;
     }
 
     h2 {
@@ -43,7 +43,7 @@
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #ddd;
       max-width: 600px;
       margin: 0 auto 30px;
@@ -70,6 +70,23 @@
       font-size: 0.9rem;
       color: #888;
       margin-top: 50px;
+    }
+
+    /* 📱 Responsividade para telas pequenas */
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+
+      .botao {
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>

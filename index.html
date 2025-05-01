@@ -1,24 +1,152 @@
-body::before,
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  width: 15px;
-  height: 100%;
-  z-index: 0;
-  background: linear-gradient(to bottom, #ff00ff33, #8000ff33, #ff00ff33);
-  animation: pulse 3s ease-in-out infinite;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Wise Métodos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-body::before {
-  left: 0;
-}
+    body {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(to bottom, #1e0033, #000);
+      color: white;
+      line-height: 1.6;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
-body::after {
-  right: 0;
-}
+    /* Efeito animado nas laterais */
+    body::before,
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      width: 15px;
+      height: 100%;
+      z-index: 0;
+      background: linear-gradient(to bottom, #ff00ff33, #8000ff33, #ff00ff33);
+      animation: pulse 3s ease-in-out infinite;
+    }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 0.6; }
-}
+    body::before {
+      left: 0;
+    }
+
+    body::after {
+      right: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.6; }
+    }
+
+    header {
+      background: #330066;
+      padding: 10px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    header img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    main {
+      padding: 50px 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #ddd;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .botao {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .botao:hover {
+      background-color: #e6b800;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 50px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+
+      .botao {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+      }
+
+      footer {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo The Wise Métodos">
+  </header>
+
+  <main>
+    <h2>Bem-vindo ao The Wise Métodos</h2>
+    <p>
+      Cadastre-se pelo nosso link exclusivo, fale com a gente no WhatsApp abaixo e receba seu <strong>reembolso imediato em todos depósitos</strong>!<br><br>
+      Com nossos <strong>métodos inteligentes baseados em RTP</strong>, você aprende a jogar com estratégia e aumenta suas chances de ganhar!<br><br>
+      🎯 Aposte de graça com o suporte de quem entende do jogo.
+    </p>
+    
+    <a href="https://wa.me/5522981434720" target="_blank" class="botao">
+      Entrar em Contato (WhatsApp)
+    </a>
+  </main>
+
+  <footer>
+    © 2025 The Wise Métodos • Contato: (22) 98143-4720
+  </footer>
+
+</body>
+</html>

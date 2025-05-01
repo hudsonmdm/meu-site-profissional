@@ -20,10 +20,23 @@
     }
 
     header {
-      background: #330066; /* roxo escuro médio */
+      position: relative;
       padding: 10px 0; /* faixa roxa menor */
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       animation: pulsar 3s ease-in-out infinite; /* animação de pulsar */
+    }
+
+    /* Camada de blur roxo e azul */
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(51, 0, 102, 0.5), rgba(0, 0, 255, 0.5));
+      filter: blur(10px);
+      z-index: 0; /* Coloca a camada atrás do conteúdo */
     }
 
     header img {
@@ -32,10 +45,13 @@
       height: auto;
       margin: 0 auto 10px;
       display: block;
+      z-index: 1; /* Certifica-se de que a imagem ficará sobre a camada de blur */
     }
 
     main {
       padding: 50px 20px;
+      z-index: 1;
+      position: relative; /* Para garantir que o conteúdo não seja afetado pelo blur */
     }
 
     h2 {

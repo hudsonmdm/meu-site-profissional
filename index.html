@@ -23,6 +23,7 @@
       background: #330066; /* roxo escuro médio */
       padding: 10px 0; /* faixa roxa menor */
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      animation: pulsar 3s ease-in-out infinite; /* animação de pulsar */
     }
 
     header img {
@@ -92,6 +93,19 @@
 
       footer {
         font-size: 0.8rem;
+      }
+    }
+
+    /* Animação de pulsar */
+    @keyframes pulsar {
+      0% {
+        background-color: #330066;
+      }
+      50% {
+        background-color: #6600cc; /* tom mais claro de roxo */
+      }
+      100% {
+        background-color: #330066;
       }
     }
   </style>
